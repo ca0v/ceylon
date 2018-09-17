@@ -31,31 +31,25 @@
     "mocha": "^5.2.0",
     "pre-commit": "^1.2.2",
     "rimraf": "^2.5.4",
-    "rollup": "^0.36.0",
-    "rollup-plugin-commonjs": "^5.0.4",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-uglify": "^1.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.3"
+    "tslint": "^5.11.0"
   },
   "scripts": {
     "pretest": "rimraf ./temp && tsc --outDir ./temp",
     "test": "mocha --reporter dot ./temp/tests/*.spec.js ./temp/tests/**/*.spec.js && tslint  --project ./tsconfig.json",
     "posttest": "rimraf ./temp",
     "prebuild": "rimraf ./lib",
-    "build:es5": "tsc --outDir ./lib --declaration ./src/index.ts ./src/umd.ts",
-    "build:es6": "tsc --target es5 --module es2015 --moduleResolution node --outDir ./lib/es6 ./src/index.ts",
-    "build:umd": "node ./scripts/build-umd.js",
-    "build": "npm run build:es5 && npm run build:es6 && npm run build:umd",
+    "build:commonjs": "tsc --module commonjs --outDir ./lib --declaration ./index.ts",
+    "build:es6": "tsc --module es2015 --outDir ./lib/es6 ./index.ts",
+    "build:umd": "tsc --module umd --outDir ./lib/umd ./index.ts",
+    "build": "npm run build:commonjs && npm run build:es6 && npm run build:umd",
     "prepublish": "npm test && npm run build",
     "postpublish": "rimraf ./lib",
-    "pre-commit-message": "echo Testing and Linting Code"
+    "install": "npm run build"
   },
   "pre-commit": [
-    "pre-commit-message",
     "test"
   ],
   "dependencies": {
-    "fast-deep-equal": "^2.0.1"
+    "typescript": "^3.0.3"
   }
 }
