@@ -6,9 +6,6 @@
   "main": "lib/index.js",
   "jsnext:main": "lib/es6/index.js",
   "typings": "lib/index",
-  "files": [
-    "lib/"
-  ],
   "author": {
     "name": "Dylan Parry",
     "email": "me@dylanparry.com"
