@@ -30,24 +30,21 @@
     "@types/mocha": "^5.2.5",
     "mocha": "^5.2.0",
     "pre-commit": "^1.2.2",
-    "rimraf": "^2.5.4",
     "tslint": "^5.11.0"
   },
   "scripts": {
-    "pretest": "rimraf ./temp && tsc --outDir ./temp",
+    "pretest": "rm -rf ./temp/** && tsc --outDir ./temp",
     "test": "mocha --reporter dot ./temp/tests/*.spec.js ./temp/tests/**/*.spec.js && tslint  --project ./tsconfig.json",
-    "posttest": "rimraf ./temp",
-    "prebuild": "rimraf ./lib",
     "build:commonjs": "tsc --module commonjs --outDir ./lib --declaration ./index.ts",
     "build:es6": "tsc --module es2015 --outDir ./lib/es6 ./index.ts",
     "build:umd": "tsc --module umd --outDir ./lib/umd ./index.ts",
     "build": "npm run build:commonjs && npm run build:es6 && npm run build:umd",
-    "prepublish": "npm test && npm run build",
-    "postpublish": "rimraf ./lib",
+    "prepublish": "npm test",
     "install": "npm run build"
   },
   "pre-commit": [
-    "test"
+    "test",
+    "install"
   ],
   "dependencies": {
     "typescript": "^3.0.3"
