@@ -27,15 +27,15 @@
     "spec"
   ],
   "devDependencies": {
-    "@types/mocha": "^2.2.32",
+    "@types/mocha": "^5.2.5",
     "mocha": "^5.2.0",
-    "pre-commit": "^1.1.3",
+    "pre-commit": "^1.2.2",
     "rimraf": "^2.5.4",
     "rollup": "^0.36.0",
     "rollup-plugin-commonjs": "^5.0.4",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-uglify": "^1.0.1",
-    "tslint": "^3.15.1",
+    "tslint": "^5.11.0",
     "typescript": "^3.0.3"
   },
   "scripts": {
