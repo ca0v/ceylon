@@ -1,4 +1,4 @@
-﻿import expect from '../../src/index';
+﻿import { expect } from "../../index";
 
 describe('expect(Object)', () => {
     describe('toExist', () => {

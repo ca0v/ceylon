@@ -1,8 +1,7 @@
-import expect from '../src/index';
-import Expectation from '../src/expectation';
+import { expect, Expectation } from "../index";
 
-describe('expect', () => {
-    it('creates a new Expectation object', () => {
+describe("expect", () => {
+    it("creates a new Expectation object", () => {
         const sut = expect(true);
 
         expect(sut).toExist();
