@@ -1,21 +1,18 @@
 {
-  "name": "ceylon",
-  "version": "0.9.1",
+  "name": "@ca0v/ceylon",
+  "version": "1.0.0",
+  "private": true,
   "description": "An assertion library for TypeScript and JavaScript",
   "license": "MIT",
   "main": "lib/index.js",
   "jsnext:main": "lib/es6/index.js",
   "typings": "lib/index",
   "author": {
-    "name": "Dylan Parry",
-    "email": "me@dylanparry.com"
+    "name": "Corey Alix"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dylanparry/ceylon"
-  },
+  "repository": "github:ca0v/caylon",
   "bugs": {
-    "url": "https://github.com/dylanparry/ceylon/issues"
+    "url": "https://github.com/ca0v/ceylon/issues"
   },
   "tags": [
     "unit test",
