@@ -567,7 +567,7 @@ export default class Expectation<T>
                 }
 
                 // Now check that the value of the property is the same
-                if (!deepEqual(this.actual[valueProperties[i]], value[valueProperties[i]])) {
+                if (!deepEqual((<any>this.actual)[valueProperties[i]], value[valueProperties[i]])) {
                     included = false;
                 }
             }
@@ -650,7 +650,7 @@ export default class Expectation<T>
                 // Check if this.actual has this property
                 if (this.actual.hasOwnProperty(valueProperties[i])) {
                     // Now check if the property is the same in value
-                    if (deepEqual(this.actual[valueProperties[i]], value[valueProperties[i]])) {
+                    if (deepEqual((<any>this.actual)[valueProperties[i]], value[valueProperties[i]])) {
                         included = true;
                         break; // Break the loop early as we've found a property that doesn't exist
                     }

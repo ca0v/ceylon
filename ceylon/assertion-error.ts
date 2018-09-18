@@ -5,16 +5,16 @@ export interface IAssertionErrorOptions {
     showDiff?: boolean;
 }
 
-export default function ({ message, expected, actual, showDiff }: IAssertionErrorOptions): Error {
-    const error = new Error(message);
+export default function({ message, expected, actual, showDiff }: IAssertionErrorOptions): Error {
+    const error = new Error(message) as any;
 
     // Properties used by Mocha and other frameworks to show errors
-    error['expected'] = expected;
-    error['actual'] = actual;
-    error['showDiff'] = showDiff;
+    error["expected"] = expected;
+    error["actual"] = actual;
+    error["showDiff"] = showDiff;
 
     // Set the error name to an AssertionError
-    error.name = 'AssertionError';
+    error.name = "AssertionError";
 
-    return error;
+    return error as Error;
 }
