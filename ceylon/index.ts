@@ -1,6 +1,6 @@
-import IExpect from './interfaces/expect';
-import Expectation from './expectation';
-export { default as assert } from './assert';
+import IExpect from "./interfaces/expect";
+import Expectation from "./expectation";
+export { default as assert } from "./assert";
 
 /**
  * Creates a new expectation, which allows assertions to be made on the item passed into it

@@ -1,10 +1,10 @@
-import IBooleanExpectation from './boolean-expectation';
-import INumberExpectation from './number-expectation';
-import IStringExpectation from './string-expectation';
-import IArrayExpectation from './array-expectation';
-import IFunctionExpectation from './function-expectation';
-import IObjectExpectation from './object-expectation';
-import IExpectation from './expectation';
+import IBooleanExpectation from "./boolean-expectation";
+import INumberExpectation from "./number-expectation";
+import IStringExpectation from "./string-expectation";
+import IArrayExpectation from "./array-expectation";
+import IFunctionExpectation from "./function-expectation";
+import IObjectExpectation from "./object-expectation";
+import IExpectation from "./expectation";
 
 interface IExpect {
     /**

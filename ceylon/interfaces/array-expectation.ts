@@ -1,4 +1,4 @@
-import IExpectation from './expectation';
+import IExpectation from "./expectation";
 
 interface IArrayExpectation<T> extends IExpectation<T[]> {
     /**

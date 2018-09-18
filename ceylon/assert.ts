@@ -1,4 +1,4 @@
-import AssertionError from './assertion-error';
+import AssertionError from "./assertion-error";
 
 export interface IAssertOptions {
     assertion: boolean;
@@ -18,7 +18,7 @@ const assert = ({ assertion, message, actual, expected }: IAssertOptions): void 
             actual,
             expected,
             message,
-            showDiff: typeof actual !== 'undefined' && typeof expected !== 'undefined',
+            showDiff: typeof actual !== "undefined" && typeof expected !== "undefined"
         });
 
         throw error;

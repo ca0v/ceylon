@@ -4,6 +4,6 @@
  * and re-export it as the default export with no other named exports.
  */
 
-import expect from './index';
+import expect from "./index";
 
 export default expect;
