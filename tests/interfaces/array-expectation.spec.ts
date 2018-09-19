@@ -202,8 +202,8 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toInclude"](1)).toThrow();
-            expect(() => expect(undefined)["toContain"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toInclude"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toContain"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -236,9 +236,9 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toExclude"](1)).toThrow();
-            expect(() => expect(undefined)["toNotInclude"](1)).toThrow();
-            expect(() => expect(undefined)["toNotContain"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toExclude"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotInclude"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotContain"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -271,8 +271,8 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toIncludeKey"](1)).toThrow();
-            expect(() => expect(undefined)["toContainKey"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toIncludeKey"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toContainKey"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -305,9 +305,9 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toExcludeKey"](1)).toThrow();
-            expect(() => expect(undefined)["toNotIncludeKey"](1)).toThrow();
-            expect(() => expect(undefined)["toNotContainKey"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toExcludeKey"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotIncludeKey"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotContainKey"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -343,8 +343,8 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toIncludeKeys"](1)).toThrow();
-            expect(() => expect(undefined)["toContainKeys"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toIncludeKeys"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toContainKeys"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -381,9 +381,9 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toExcludeKeys"](1)).toThrow();
-            expect(() => expect(undefined)["toNotIncludeKeys"](1)).toThrow();
-            expect(() => expect(undefined)["toNotContainKeys"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toExcludeKeys"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotIncludeKeys"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotContainKeys"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -415,7 +415,7 @@ describe("expect(array)", () => {
         });
 
         it("throws when called on a non-array", () => {
-            expect(() => expect(undefined)["toHaveLength"](2)).toThrow();
+            expect(() => (<any>expect(undefined))["toHaveLength"](2)).toThrow();
         });
 
         it("is chainable", () => {

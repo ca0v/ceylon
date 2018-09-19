@@ -185,7 +185,7 @@ describe("expect(string)", () => {
         });
 
         it("throws when called on a non-string", () => {
-            expect(() => expect(undefined)["toMatch"](/^test$/)).toThrow();
+            expect(() => (<any>expect(undefined))["toMatch"](/^test$/)).toThrow();
         });
 
         it("is chainable", () => {
@@ -211,7 +211,7 @@ describe("expect(string)", () => {
         });
 
         it("throws when called on a non-string", () => {
-            expect(() => expect(undefined)["toNotMatch"](/^test$/)).toThrow();
+            expect(() => (<any>expect(undefined))["toNotMatch"](/^test$/)).toThrow();
         });
 
         it("is chainable", () => {
@@ -241,8 +241,8 @@ describe("expect(string)", () => {
         });
 
         it("throws when called on a non-string", () => {
-            expect(() => expect(undefined)["toInclude"]("test")).toThrow();
-            expect(() => expect(undefined)["toContain"]("test")).toThrow();
+            expect(() => (<any>expect(undefined))["toInclude"]("test")).toThrow();
+            expect(() => (<any>expect(undefined))["toContain"]("test")).toThrow();
         });
 
         it("is chainable", () => {
@@ -273,9 +273,9 @@ describe("expect(string)", () => {
         });
 
         it("throws when called on a non-string", () => {
-            expect(() => expect(undefined)["toExclude"]("test")).toThrow();
-            expect(() => expect(undefined)["toNotInclude"]("test")).toThrow();
-            expect(() => expect(undefined)["toNotContain"]("test")).toThrow();
+            expect(() => (<any>expect(undefined))["toExclude"]("test")).toThrow();
+            expect(() => (<any>expect(undefined))["toNotInclude"]("test")).toThrow();
+            expect(() => (<any>expect(undefined))["toNotContain"]("test")).toThrow();
         });
 
         it("is chainable", () => {
@@ -304,7 +304,7 @@ describe("expect(string)", () => {
         });
 
         it("throws when called on a non-string", () => {
-            expect(() => expect(undefined)["toHaveLength"](6)).toThrow();
+            expect(() => (<any>expect(undefined))["toHaveLength"](6)).toThrow();
         });
 
         it("is chainable", () => {

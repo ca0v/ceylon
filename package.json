@@ -30,10 +30,10 @@
     "tslint": "^5.11.0"
   },
   "scripts": {
-    "pretest": "rm -rf ./temp/** && tsc --outDir ./temp",
+    "pretest": "rm -rf ./temp/** && tsc --noImplicitAny false --outDir ./temp",
     "test": "mocha --reporter dot ./temp/tests/*.spec.js ./temp/tests/**/*.spec.js",
     "lint": "tslint  --project ./tsconfig.json",
-    "build:commonjs": "tsc --module commonjs --outDir ./lib --declaration ./index.ts",
+    "build:commonjs": "tsc --module commonjs --outDir ./ --declaration ./index.ts",
     "build:es6": "tsc --module es2015 --outDir ./lib/es6 ./index.ts",
     "build:umd": "tsc --module umd --outDir ./lib/umd ./index.ts",
     "build": "npm run build:commonjs && npm run build:es6 && npm run build:umd",

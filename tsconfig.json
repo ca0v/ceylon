@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noEmitOnError": true,

@@ -9,9 +9,9 @@ export default function({ message, expected, actual, showDiff }: IAssertionError
     const error = new Error(message) as any;
 
     // Properties used by Mocha and other frameworks to show errors
-    error["expected"] = expected;
-    error["actual"] = actual;
-    error["showDiff"] = showDiff;
+    (<any>error)["expected"] = expected;
+    (<any>error)["actual"] = actual;
+    (<any>error)["showDiff"] = showDiff;
 
     // Set the error name to an AssertionError
     error.name = "AssertionError";

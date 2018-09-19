@@ -1,4 +1,4 @@
-export function equal<T>(a: Partial<T>, b: Partial<T>) {
+export function equal<T>(a: Partial<T>, b: Partial<T>): boolean {
     if (a === b) return true;
     if ([Object, Array, Date, RegExp].some(t => a instanceof t !== b instanceof t)) return false;
 
@@ -12,7 +12,7 @@ export function equal<T>(a: Partial<T>, b: Partial<T>) {
 
         let keys = Object.keys(a);
         if (keys.length !== Object.keys(b).length) return false;
-        return keys.every(key => b.hasOwnProperty(key) && equal(a[key], b[key]));
+        return keys.every(key => b.hasOwnProperty(key) && equal((<any>a)[key], (<any>b)[key]));
     }
 
     // isInfinite, isNaN

@@ -172,7 +172,7 @@ describe("expect(boolean)", () => {
         });
 
         it("throws when called on a non-boolean", () => {
-            expect(() => expect(undefined)["toBeTrue"]()).toThrow();
+            expect(() => (<any>expect(undefined))["toBeTrue"]()).toThrow();
         });
 
         it("is chainable", () => {
@@ -196,7 +196,7 @@ describe("expect(boolean)", () => {
         });
 
         it("throws when called on a non-boolean", () => {
-            expect(() => expect(undefined)["toBeFalse"]()).toThrow();
+            expect(() => (<any>expect(undefined))["toBeFalse"]()).toThrow();
         });
 
         it("is chainable", () => {

@@ -22,9 +22,9 @@ describe("AssertionError", () => {
             message: "Error message"
         });
 
-        expect(error["actual"]).toNotExist();
-        expect(error["expected"]).toNotExist();
-        expect(error["showDiff"]).toNotExist();
+        expect((<any>error)["actual"]).toNotExist();
+        expect((<any>error)["expected"]).toNotExist();
+        expect((<any>error)["showDiff"]).toNotExist();
     });
 
     it("sets the actual, expected, and showDiff properties when specified", () => {
@@ -35,8 +35,8 @@ describe("AssertionError", () => {
             showDiff: true
         });
 
-        expect(error["actual"]).toBe("I ate an apple");
-        expect(error["expected"]).toBe("I ate an orange");
-        expect(error["showDiff"] as boolean).toBeTrue();
+        expect((<any>error)["actual"]).toBe("I ate an apple");
+        expect((<any>error)["expected"]).toBe("I ate an orange");
+        expect((<any>error)["showDiff"] as boolean).toBeTrue();
     });
 });

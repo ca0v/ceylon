@@ -183,8 +183,8 @@ describe("expect(number)", () => {
         });
 
         it("throws when called on a non-number", () => {
-            expect(() => expect(undefined)["toBeLessThan"](1)).toThrow();
-            expect(() => expect(undefined)["toBeFewerThan"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeLessThan"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeFewerThan"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -219,8 +219,8 @@ describe("expect(number)", () => {
         });
 
         it("throws when called on a non-number", () => {
-            expect(() => expect(undefined)["toBeLessThanOrEqualTo"](1)).toThrow();
-            expect(() => expect(undefined)["toBeFewerThanOrEqualTo"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeLessThanOrEqualTo"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeFewerThanOrEqualTo"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -255,8 +255,8 @@ describe("expect(number)", () => {
         });
 
         it("throws when called on a non-number", () => {
-            expect(() => expect(undefined)["toBeGreaterThan"](1)).toThrow();
-            expect(() => expect(undefined)["toBeMoreThan"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeGreaterThan"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeMoreThan"](1)).toThrow();
         });
 
         it("is chainable", () => {
@@ -289,8 +289,8 @@ describe("expect(number)", () => {
         });
 
         it("throws when called on a non-number", () => {
-            expect(() => expect(undefined)["toBeGreaterThanOrEqualTo"](1)).toThrow();
-            expect(() => expect(undefined)["toBeMoreThanOrEqualTo"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeGreaterThanOrEqualTo"](1)).toThrow();
+            expect(() => (<any>expect(undefined))["toBeMoreThanOrEqualTo"](1)).toThrow();
         });
 
         it("is chainable", () => {

@@ -1,23 +1,23 @@
 import { expect } from "../../index";
 
-describe("expect(undefined)", () => {
+describe("(<any>expect(undefined))", () => {
     describe("toExist", () => {
         it("throws", () => {
-            expect(() => expect(undefined).toExist()).toThrow();
+            expect(() => (<any>expect(undefined)).toExist()).toThrow();
         });
     });
 
     describe("toNotExist", () => {
         it("does not throw", () => {
-            expect(undefined).toNotExist();
+            (<any>expect(undefined)).toNotExist();
         });
 
         it("throws when called with invalid arguments", () => {
-            expect(() => expect(undefined).toNotExist(null as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toNotExist(null as any)).toThrow();
         });
 
         it("is chainable", () => {
-            expect(undefined)
+            (<any>expect(undefined))
                 .toNotExist()
                 .toNotExist();
         });
@@ -25,19 +25,19 @@ describe("expect(undefined)", () => {
 
     describe("toBe", () => {
         it("does not throw when assertion passes", () => {
-            expect(undefined).toBe(undefined);
+            (<any>expect(undefined)).toBe(undefined);
         });
 
         it("throws when assertion fails", () => {
-            expect(() => expect(undefined).toBe(1 as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toBe(1 as any)).toThrow();
         });
 
         it("throws when called with invalid arguments", () => {
-            expect(() => expect(undefined).toBe(undefined, null as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toBe(undefined, null as any)).toThrow();
         });
 
         it("is chainable", () => {
-            expect(undefined)
+            (<any>expect(undefined))
                 .toBe(undefined)
                 .toBe(undefined);
         });
@@ -45,19 +45,19 @@ describe("expect(undefined)", () => {
 
     describe("toNotBe", () => {
         it("does not throw when assertion passes", () => {
-            expect(undefined).toNotBe(1 as any);
+            (<any>expect(undefined)).toNotBe(1 as any);
         });
 
         it("throws when assertion fails", () => {
-            expect(() => expect(undefined).toNotBe(undefined)).toThrow();
+            expect(() => (<any>expect(undefined)).toNotBe(undefined)).toThrow();
         });
 
         it("throws when called with invalid arguments", () => {
-            expect(() => expect(undefined).toNotBe(1 as any, null as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toNotBe(1 as any, null as any)).toThrow();
         });
 
         it("is chainable", () => {
-            expect(undefined)
+            (<any>expect(undefined))
                 .toNotBe(1 as any)
                 .toNotBe(1 as any);
         });
@@ -65,19 +65,19 @@ describe("expect(undefined)", () => {
 
     describe("toEqual", () => {
         it("does not throw when assertion passes", () => {
-            expect(undefined).toEqual(undefined);
+            (<any>expect(undefined)).toEqual(undefined);
         });
 
         it("throws when assertion fails", () => {
-            expect(() => expect(undefined).toEqual(1 as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toEqual(1 as any)).toThrow();
         });
 
         it("throws when called with invalid arguments", () => {
-            expect(() => expect(undefined).toEqual(undefined, null as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toEqual(undefined, null as any)).toThrow();
         });
 
         it("is chainable", () => {
-            expect(undefined)
+            (<any>expect(undefined))
                 .toEqual(undefined)
                 .toEqual(undefined);
         });
@@ -85,19 +85,19 @@ describe("expect(undefined)", () => {
 
     describe("toNotEqual", () => {
         it("does not throw when assertion passes", () => {
-            expect(undefined).toNotEqual(1 as any);
+            (<any>expect(undefined)).toNotEqual(1 as any);
         });
 
         it("throws when assertion fails", () => {
-            expect(() => expect(undefined).toNotEqual(undefined)).toThrow();
+            expect(() => (<any>expect(undefined)).toNotEqual(undefined)).toThrow();
         });
 
         it("throws when called with invalid arguments", () => {
-            expect(() => expect(undefined).toNotEqual(1 as any, null as any)).toThrow();
+            expect(() => (<any>expect(undefined)).toNotEqual(1 as any, null as any)).toThrow();
         });
 
         it("is chainable", () => {
-            expect(undefined)
+            (<any>expect(undefined))
                 .toNotEqual(1 as any)
                 .toNotEqual(1 as any);
         });
