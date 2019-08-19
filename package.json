@@ -1,6 +1,6 @@
 {
   "name": "@ca0v/ceylon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "An assertion library for TypeScript and JavaScript",
   "license": "MIT",
@@ -36,7 +36,7 @@
     "build:commonjs": "tsc --module commonjs --outDir ./ --declaration ./index.ts",
     "build:es6": "tsc --module es2015 --outDir ./lib/es6 ./index.ts",
     "build:umd": "tsc --module umd --outDir ./lib/umd ./index.ts",
-    "build": "npm run build:commonjs && npm run build:es6 && npm run build:umd",
+    "build": "npm run build:es6 && npm run build:umd",
     "prepublish": "npm test",
     "install": "npm run build"
   },
