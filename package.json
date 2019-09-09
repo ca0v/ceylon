@@ -38,7 +38,7 @@
     "build:umd": "tsc --module umd --outDir ./lib/umd ./index.ts",
     "build": "npm run build:es6 && npm run build:umd",
     "prepublish": "npm test",
-    "install": "npm run build"
+    "postinstall": "npm run build"
   },
   "pre-commit": [
     "test",
