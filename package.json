@@ -43,7 +43,7 @@
   "pre-commit": [
     "test",
     "lint",
-    "install"
+    "postinstall"
   ],
   "dependencies": {
     "typescript": "^3.6.2"
