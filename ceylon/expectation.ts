@@ -732,11 +732,14 @@ export default class Expectation<T>
             });
         }
 
+        // assume 'actual' it is a parameterless function
+        let actual = () => (<Function>this.actual)();
+
         if (typeof error === "undefined") {
             let threw: boolean = false;
 
             try {
-                this.actual();
+                actual();
             } catch (e) {
                 threw = true;
             }
@@ -747,7 +750,7 @@ export default class Expectation<T>
             });
         } else if (typeof error === "string") {
             try {
-                this.actual();
+                actual();
             } catch (e) {
                 assert({
                     assertion: e.message === error,
@@ -756,7 +759,7 @@ export default class Expectation<T>
             }
         } else if (error instanceof RegExp) {
             try {
-                this.actual();
+                actual();
             } catch (e) {
                 assert({
                     assertion: error.test(e.message),
@@ -765,7 +768,7 @@ export default class Expectation<T>
             }
         } else if (typeof error === "function") {
             try {
-                this.actual();
+                actual();
             } catch (e) {
                 assert({
                     assertion: e instanceof error,
@@ -801,7 +804,7 @@ export default class Expectation<T>
         let threw: boolean = false;
 
         try {
-            this.actual();
+            (<Function>this.actual)();
         } catch (e) {
             threw = true;
         }
